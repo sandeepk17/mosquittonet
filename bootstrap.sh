@@ -17,8 +17,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Copy node-red configs over to the data folder
-cp ./node-red/package.json /data/package.json
-cp ./node-red/flows.json /data/flows.json
+sudo cp ./node-red/*.json /data/node-red/
+
 
 # docker-compose up
 docker-compose up

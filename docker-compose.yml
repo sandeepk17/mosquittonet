@@ -17,7 +17,7 @@ services:
     image: nodered/node-red-docker
     user: root
     volumes:
-      - /data/node-red:/data
+      - /data/node-red:/data/
     networks:
       - local
     ports:
