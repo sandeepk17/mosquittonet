@@ -6,7 +6,7 @@ networks:
 services:
   mosquitto:
     image: eclipse-mosquitto
-    networks: 
+    networks:
       - local
     ports:
      - "1883:1883"
@@ -15,11 +15,12 @@ services:
     restart: on-failure
   node-red:
     image: nodered/node-red-docker
+    user: root
     volumes:
       - /data/node-red:/data
-    networks: 
+    networks:
       - local
-    ports: 
+    ports:
       - "1880:1880"
     restart: on-failure
   mongodb:
@@ -29,6 +30,6 @@ services:
       - /data/mongodb/configdb:/data/configdb
     networks:
       - local
-    ports: 
+    ports:
       - "27017:27017"
     restart: on-failure
