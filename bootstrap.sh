@@ -24,11 +24,15 @@ sudo service docker start
 sudo systemctl enable docker
 sudo usermod -aG docker ec2-user
 
+#Create docker local bridge network
+docker network create local
+
 # Install docker compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Copy node-red configs over to the data folder
+sudo mkdir /data/node-red
 sudo cp ./node-red/*.json /data/node-red/
 
 echo "Rebooting instance to initialize docker-compose""
