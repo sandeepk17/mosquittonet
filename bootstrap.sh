@@ -31,8 +31,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Copy node-red configs over to the data folder
 sudo cp ./node-red/*.json /data/node-red/
 
-
-# docker-compose up
-docker-compose up
-
-echo "REMINDER: if docker-compose fails try rebooting the instance"
+echo "Rebooting instance to initialize docker-compose""
+sudo reboot
