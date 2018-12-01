@@ -7,3 +7,5 @@ docker run -d --restart on-failure --network local -p 27017:27017 -v /data/mongo
 
 #Node-Red:
 docker run -d --restart on-failure --network local -p 1880:1880 --user root -v /data/node-red:/data --name node-red nodered/node-red-docker
+
+echo "REMINDER: If this is the first-time setup you will need to run npm install to update missing dependencies and restart the container"
